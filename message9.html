@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100 Days of Love</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .message-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            transition: transform 0.3s ease;
+        }
+
+        .message-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .heart {
+            font-size: 4rem;
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        p {
+            color: #34495e;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .ready {
+            color: #27ae60;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .open-message {
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .open-message:hover {
+            background: #2980b9;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 15% auto;
+            padding: 20px;
+            width: 70%;
+            max-width: 500px;
+            border-radius: 10px;
+            position: relative;
+            text-align: center;
+        }
+
+        .close-btn {
+            position: absolute;
+            right: 20px;
+            top: 10px;
+            background: #e74c3c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .close-btn:hover {
+            background: #c0392b;
+        }
+
+        .celebration {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .day-badge {
+            background: #ff6b6b;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-card">
+        <div class="celebration">🎉</div>
+        <div class="day-badge">100 Days Complete! 🥳</div>
+        <div class="heart">❤️</div>
+        <h1>Sonaa, Aaj Humare 100 Din Complete Ho Gaye! 💖</h1>
+        <p>It was a very happy day for me, Sonaa. Aaj bhale hi aap mere pass nahin hai, </p>
+        <p>magar aap sahi mein mere dil ke bahut paas ho... 🥹</p>
+        <p><strong>Baby, I feel something so special for you.</strong></p>
+        <p>Main apni feelings ko words ke through convey karne ki koshish kar raha hun.</p>
+        <p>Please meri baaton ko samajhna, aap...</p>
+        <p>I really love you, it's not just a word, it's the way I can express</p>
+        <p>that thing I feel for you, that I love the most in this world - YOU.</p>
+        <p>100 days complete ho gaye hain, pata bhi nahin chala! 😊</p>
+        <p>Lagta hai main aapke sath 36625 din rah sakun (sakuun ka matlab ladai, gussa, batai, masti... 😉)</p>
+        <br>
+        <a href="#" class="open-message" onclick="openModal()">Click to Read Our 100 Days Journey</a>
+    </div>
+
+    <!-- Modal -->
+    <div id="messageModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>💌 Our 100 Days Journey 💌</h2>
+            <p>Sonaa, aaj humare 100 din complete ho gaye hain... 🥳</p>
+            <p>Har pal aapke sath bi
+taya hua, har lamha aapke pyaar ka ek naya ehsaas laya hai.</p>
+            <p>Aap mere liye bahut khaas hain, aur main aapko apni zindagi ka sabse khaas hissa banana chahta hun.</p>
+            <p>I love you more than words can express, Sonaa. You mean everything to me.</p>
+            <p>Let's celebrate many more days together! 🥰</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('messageModal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('messageModal').style.display = 'none';
+        }
+
+        // Close modal when clicking outside the modal content
+        window.onclick = function(event) {
+            const modal = document.getElementById('messageModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
+
+
